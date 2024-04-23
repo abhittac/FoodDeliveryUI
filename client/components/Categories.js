@@ -11,6 +11,7 @@ const Categories = () => {
     useEffect(()=>{
         getCategories().then((data)=>{
             setcategories(data)
+            console.log('chck',data)
         })
     },[])
     console.log('check',activeCategory)

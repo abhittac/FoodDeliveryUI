@@ -1,13 +1,13 @@
 //import liraries
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView, SafeAreaView } from 'react-native';
 import { themeColors } from '../theme';
 import RestaurantCard from './RestaurantCard';
 
 // create a component
 const FeaturedRow = ({title,restaurants,description}) => {
     return (
-        <View>
+        <SafeAreaView>
         <View className="flex-row justify-between items-center px-4">
            <View >
 
@@ -23,7 +23,8 @@ const FeaturedRow = ({title,restaurants,description}) => {
         horizontal
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={{
-            paddingHorizontal:15
+            paddingHorizontal:20,
+            paddingVertical:10
         }}
         className="overflow-visible py-5"
         >
@@ -39,7 +40,7 @@ const FeaturedRow = ({title,restaurants,description}) => {
             }
 
         </ScrollView>
-        </View>
+        </SafeAreaView>
     );
 };
 

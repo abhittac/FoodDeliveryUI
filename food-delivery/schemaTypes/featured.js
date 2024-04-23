@@ -17,6 +17,7 @@ export default defineType({
   title:'Description',
   validation:rule =>rule.required().max(200)
  },
+ 
  {
     name: 'restaurants',
     type:'array',
