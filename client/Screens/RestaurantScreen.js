@@ -6,6 +6,7 @@ import * as Icon from "react-native-feather"
 import { themeColors } from '../theme';
 import { urlFor } from '../sanity';
 import DishRow from '../components/DishRow';
+import CartIcon from '../components/CartIcon';
 // create a component
 const RestaurantScreen = () => {
     const {params} =useRoute()
@@ -13,6 +14,7 @@ const RestaurantScreen = () => {
     let item=params
     return (
         <SafeAreaView >
+            <CartIcon/>
            <ScrollView>
             <View >
                 <Image className="w-full h-72" source={{uri:urlFor(params.image.asset._ref).url()}}/>
