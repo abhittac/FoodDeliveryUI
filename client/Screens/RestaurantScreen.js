@@ -12,9 +12,10 @@ const RestaurantScreen = () => {
     const {params} =useRoute()
     const navigation=useNavigation()
     let item=params
+    console.log("checkItems",item)
     return (
         <SafeAreaView >
-            <CartIcon/>
+            <CartIcon item={item}/>
            <ScrollView>
             <View >
                 <Image className="w-full h-72" source={{uri:urlFor(params.image.asset._ref).url()}}/>
